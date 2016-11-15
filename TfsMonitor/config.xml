@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <tfs>
+    <url>http://development.titansoft.com.sg:8080/tfs/defaultcollection</url>
+    <projects>
+      <!--<project key="AccountCommon" value="$/MonkeySoft/AccountCommon" />
+      <project key="Atlas.Account" value="$/MonkeySoft/Atlas.Account" />
+      <project key="Atlas.Player" value="$/MonkeySoft/Atlas.Player" />
+      <project key="Atlas.Profile" value="$/MonkeySoft/Atlas.Profile" />
+      <project key="Mercury" value="$/MonkeySoft/Mercury" />
+      <project key="Uranus" value="$/MonkeySoft/Urans" />
+      <project key="Hermes" value="$/MonkeySoft/Hermes" />
+      <project key="Nestor" value="$/MonkeySoft/Nestor" />-->
+      <project key="Ceres" value="$/RabbitSoft/Ceres" />
+    </projects>
+  </tfs>
+  <skype>
+    <groupName>#noahteamblog/$5ded1981820ba350</groupName>
+  </skype>
+</config>

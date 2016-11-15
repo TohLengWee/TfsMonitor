@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <members>
+    <member>janet</member>
+  </members>
+  <slack>
+    <webhookurl>https://hooks.slack.com/services/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</webhookurl>
+    <proxy>10.6.1.2:3128</proxy>
+  </slack>
+</config>
