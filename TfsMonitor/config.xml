@@ -3,18 +3,23 @@
   <tfs>
     <url>http://development.titansoft.com.sg:8080/tfs/defaultcollection</url>
     <projects>
-      <!--<project key="AccountCommon" value="$/MonkeySoft/AccountCommon" />
-      <project key="Atlas.Account" value="$/MonkeySoft/Atlas.Account" />
-      <project key="Atlas.Player" value="$/MonkeySoft/Atlas.Player" />
-      <project key="Atlas.Profile" value="$/MonkeySoft/Atlas.Profile" />
-      <project key="Mercury" value="$/MonkeySoft/Mercury" />
-      <project key="Uranus" value="$/MonkeySoft/Urans" />
-      <project key="Hermes" value="$/MonkeySoft/Hermes" />
-      <project key="Nestor" value="$/MonkeySoft/Nestor" />-->
-      <project key="Ceres" value="$/RabbitSoft/Ceres" />
+      <project key="Ceres" value="$/TigerSoft/Buffon" />
+      <project key="Akis" value="$/TigerSoft/Akis" />
+      <project key="Hector" value="$/TigerSoft/Hector" />
+      <project key="Pontus" value="$/TigerSoft/Pontus" />
+      <project key="Libra" value="$/TigerSoft/Libra" />
+      <project key="Prometheus" value="$/TigerSoft/Prometheus" />
+      <project key="Neleus" value="$/TigerSoft/Neleus" />
+      <project key="HectorMobile" value="$/TigerSoft/HectorMobile" />
+      <project key="Aura" value="$/TigerSoft/Aura" />
+      <project key="Themis" value="$/TigerSoft/Themis" />
+      <project key="Speed" value="$/TigerSoft/Speed" />
+      <project key="Kronos" value="$/TigerSoft/Kronos" />
+      <project key="AuraMok" value="$/TigerSoft/AuraMok" />
     </projects>
   </tfs>
-  <skype>
-    <groupName>#noahteamblog/$5ded1981820ba350</groupName>
-  </skype>
+  <master>Rum</master>
+  <slack>
+    <webhookurl></webhookurl>
+  </slack>
 </config>

@@ -11,15 +11,15 @@ namespace TfsMonitor
     public class TfsClient
     {
         private static TfsClient _tfsClient;
-        private VersionControlServer _Vcs;
-        private DateTime _LatestChangesetTime;
+        private readonly VersionControlServer _vcs;
+        private DateTime _latestChangesetTime;
         public Dictionary<string, string> MonitorProjects { get; private set; }
 
         private TfsClient(string url)
         {
             var tfsConnection = TfsTeamProjectCollectionFactory.GetTeamProjectCollection(new Uri(url));
-            _Vcs = tfsConnection.GetService<VersionControlServer>();
-            _LatestChangesetTime = DateTime.Now;
+            _vcs = tfsConnection.GetService<VersionControlServer>();
+            _latestChangesetTime = DateTime.Now;
             MonitorProjects = new Dictionary<string, string>();
         }
 
@@ -38,19 +38,18 @@ namespace TfsMonitor
 
         public void Monitor(INotificationService notificationService)
         {
-            var fromVersion = new DateVersionSpec(_LatestChangesetTime);
+            var fromVersion = new DateVersionSpec(_latestChangesetTime);
             bool hasChanges = false;
 
             try
             {
                 foreach (var project in MonitorProjects)
                 {
-                    var changesets = _Vcs.QueryHistory(project.Value, VersionSpec.Latest, 0, RecursionType.Full, null,
+                    var changesets = _vcs.QueryHistory(project.Value, VersionSpec.Latest, 0, RecursionType.Full, null,
                         fromVersion, VersionSpec.Latest, int.MaxValue, false, true);
                     foreach (Changeset changeset in changesets)
                     {
-                        var message = string.Format("{0}: [{1}] {2}", changeset.CommitterDisplayName, project.Key,
-                            changeset.Comment);
+                        var message = $"[*{project.Key}*]({changeset.ChangesetId}) - {changeset.CommitterDisplayName}: \n >{changeset.Comment}";
                         var slackMessage = new SlackPayload
                         {
                             text = message
@@ -62,7 +61,7 @@ namespace TfsMonitor
                     }
                 }
                 if (hasChanges)
-                    _LatestChangesetTime = DateTime.Now;
+                    _latestChangesetTime = DateTime.Now;
             }
             catch (Exception ex)
             {

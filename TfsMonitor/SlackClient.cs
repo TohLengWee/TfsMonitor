@@ -11,9 +11,10 @@ namespace TfsMonitor
     {
         public SlackClient()
         {
+            var configHelper = ConfigHelper.GetInstance("config.xml");
             SendAlert(new SlackPayload
             {
-                text = "Hello Noah, Good day, I am awake."
+                text = "Hello "+configHelper.GetSingleConfig("config/master")+", Good day, I am awake."
             });
         }
 
