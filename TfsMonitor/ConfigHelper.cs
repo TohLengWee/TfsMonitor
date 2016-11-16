@@ -7,11 +7,11 @@ namespace TfsMonitor
     public class ConfigHelper
     {
         private static ConfigHelper _configHelper;
-        private XDocument _XDocument;
+        private readonly XDocument _xDocument;
 
         private ConfigHelper(string configPath)
         {
-            _XDocument = XDocument.Load(configPath);
+            _xDocument = XDocument.Load(configPath);
         }
 
         public static ConfigHelper GetInstance(string configPath)
@@ -21,12 +21,12 @@ namespace TfsMonitor
 
         public IEnumerable<XElement> GetConfig(string xPath)
         {
-            return _XDocument.XPathSelectElements(xPath);
+            return _xDocument.XPathSelectElements(xPath);
         }
 
         public string GetSingleConfig(string xPath)
         {
-            return _XDocument.XPathSelectElement(xPath).Value;
+            return _xDocument.XPathSelectElement(xPath).Value;
         }
     }
 }

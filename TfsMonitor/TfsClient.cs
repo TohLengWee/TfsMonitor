@@ -49,10 +49,19 @@ namespace TfsMonitor
                         fromVersion, VersionSpec.Latest, int.MaxValue, false, true);
                     foreach (Changeset changeset in changesets)
                     {
-                        var message = $"[*{project.Key}*]({changeset.ChangesetId}) - {changeset.CommitterDisplayName}: \n >{changeset.Comment}";
+                        var message = $"[*{project.Key}*]({changeset.ChangesetId}) - {changeset.CommitterDisplayName}:";
                         var slackMessage = new SlackPayload
                         {
-                            text = message
+                            text = message,
+                            attachments = new List<SlackAttachment>
+                            {
+                                new SlackAttachment
+                                {
+                                    text = $"{changeset.Comment}",
+                                    color = "good",
+                                    mrkdwn_in = "[\"text\"]"
+                                }
+                            }
                         };
                         notificationService.SendAlert(slackMessage);
 

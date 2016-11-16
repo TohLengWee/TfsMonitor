@@ -1,12 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <config>
   <tfs>
-    <url>http://development.titansoft.com.sg:8080/tfs/defaultcollection</url>
+    <url>http://development.coreop.net:8080/tfs/defaultcollection</url>
     <projects>
-      <project key="Ceres" value="$/TigerSoft/Buffon" />
+      <project key="DemeterCore" value="$/TigerSoft/DemeterCore" />
+      <project key="Consus.Account" value="$/TigerSoft/Consus.Account" />
+      <project key="Consus.Games" value="$/TigerSoft/Consus.Games" />
+      <project key="Consus.Replication" value="$/TigerSoft/Consus.Replication" />
+      <project key="Consus.Info" value="$/TigerSoft/Consus.Info" />
+      <project key="Consus.Online" value="$/TigerSoft/Consus.Online" />
+      <project key="Consus.Common" value="$/TigerSoft/Consus.Common" />
+      <project key="Consus.Relay" value="$/TigerSoft/Consus.Relay" />
+      <project key="Consus.Sports" value="$/TigerSoft/Consus.Sports" />
+      <project key="Leo" value="$/TigerSoft/Leo" />
       <project key="Akis" value="$/TigerSoft/Akis" />
       <project key="Hector" value="$/TigerSoft/Hector" />
       <project key="Pontus" value="$/TigerSoft/Pontus" />
+      <project key="Alcis" value="$/TigerSoft/Alcis" />
       <project key="Libra" value="$/TigerSoft/Libra" />
       <project key="Prometheus" value="$/TigerSoft/Prometheus" />
       <project key="Neleus" value="$/TigerSoft/Neleus" />
@@ -15,11 +25,31 @@
       <project key="Themis" value="$/TigerSoft/Themis" />
       <project key="Speed" value="$/TigerSoft/Speed" />
       <project key="Kronos" value="$/TigerSoft/Kronos" />
+      <project key="Karpos" value="$/TigerSoft/Karpos" />
       <project key="AuraMok" value="$/TigerSoft/AuraMok" />
+      <project key="SBOEnum" value="$/TigerSoft/SBOEnum" />
+      <project key="TestRepositoryBase" value="$/TigerSoft/TestRepositoryBase" />
+      <project key="Zeus" value="$/TigerSoft/Zeus" />
+      <project key="Hera" value="$/TigerSoft/Hera" />
+      <project key="Gem" value="$/TigerSoft/Gem" />
+      <project key="Aion" value="$/TigerSoft/Aion" />
+      <project key="TiAccountCom" value="$/GoatSoft/TiAccountCom" />
+      <project key="TiAgentsCom" value="$/GoatSoft/TiAgentsCom" />
+      <project key="TiBookMakerCom" value="$/GoatSoft/TiBookMakerCom" />
+      <project key="TiHouseCom" value="$/GoatSoft/TiHouseCom" />
+      <project key="TiSBOCore.Base" value="$/Titansoft/TiSBOCore.Base" />
+      <project key="TiCommonCom" value="$/Titansoft/TiCommonCom" />
+      <project key="TiWebControl" value="$/MouseSoft/TiWebControl" />
+      <project key="Script" value="$/MouseSoft/Script" />
+      <project key="Build" value="$/MouseSoft/Build" />
     </projects>
   </tfs>
   <master>Rum</master>
+  <skype>
+    <groupName>#noahteamblog/$abdddcfd96bd58bc</groupName>
+  </skype>
   <slack>
-    <webhookurl></webhookurl>
+    <webhookurl>https://hooks.slack.com/services/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</webhookurl>
+    <proxy>10.6.1.2:3128</proxy>
   </slack>
 </config>

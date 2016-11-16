@@ -20,6 +20,7 @@ namespace TfsMonitor
 
         private static void Init()
         {
+            
             var configHelper = ConfigHelper.GetInstance("config.xml");
             var tfsClient = InitTfsClient(configHelper);
 
